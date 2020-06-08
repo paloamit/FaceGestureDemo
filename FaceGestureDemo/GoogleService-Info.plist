@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1052987731458-05b3egm2ja5hi4gl64hvesltj7cmeojm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1052987731458-05b3egm2ja5hi4gl64hvesltj7cmeojm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDgLdJ8gxuWxpPkhHDteliwu0380MYVDtY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1052987731458</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.amitpalo.mobility.FaceGestureDemo</string>
+	<key>PROJECT_ID</key>
+	<string>facegesturedemo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>facegesturedemo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1052987731458:ios:69e9022c0b90ec3648011b</string>
+	<key>DATABASE_URL</key>
+	<string>https://facegesturedemo.firebaseio.com</string>
+</dict>
+</plist>
