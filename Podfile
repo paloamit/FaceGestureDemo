@@ -9,5 +9,6 @@ target 'FaceGestureDemo' do
 
    pod 'Firebase/MLVision'
    pod 'Firebase/MLVisionFaceModel'
+   pod 'JGProgressHUD'
 
 end

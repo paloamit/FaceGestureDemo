@@ -7,10 +7,21 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var cameraView: FacialGestureCameraView!
+    @IBOutlet weak var containerView: UIView!
+    
+    private var numberOfPages = 0
+    private var currentPage = 0
+    
+    var tutorialPageViewController: TutorialPageViewController? {
+        didSet {
+            tutorialPageViewController?.tutorialDelegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +37,26 @@ class ViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         stopGestureDetection()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tutorialPageViewController = segue.destination as? TutorialPageViewController {
+            self.tutorialPageViewController = tutorialPageViewController
+        }
+    }
+    
+    func nextPageControl() {
+        if currentPage < numberOfPages {
+            currentPage = currentPage + 1
+            tutorialPageViewController?.scrollToViewController(index: currentPage)
+        }
+    }
+    
+    func previousPageControl() {
+        if currentPage > 0 {
+            currentPage = currentPage - 1
+            tutorialPageViewController?.scrollToViewController(index: currentPage)
+        }
     }
     
 }
@@ -47,30 +78,57 @@ extension ViewController {
 }
 
 extension ViewController: FacialGestureCameraViewDelegate {
-   
+    
     func doubleEyeBlinkDetected() {
-        print("Double Eye Blink Detected")
+        showHUD(withText: "😌")
     }
-
+    
     func smileDetected() {
-        print("Smile Detected")
+        showHUD(withText: "😃")
     }
-
+    
     func nodLeftDetected() {
-        print("Nod Left Detected")
+        previousPageControl()
     }
-
+    
     func nodRightDetected() {
-        print("Nod Right Detected")
+        nextPageControl()
     }
-
+    
     func leftEyeBlinkDetected() {
-        print("Left Eye Blink Detected")
+        showHUD(withText: "😉")
     }
-
+    
     func rightEyeBlinkDetected() {
-        print("Right Eye Blink Detected")
+        showHUD(withText: "😜")
     }
     
 }
+
+extension ViewController {
+    
+    private func showHUD(withText text: String) {
+        let hud = JGProgressHUD(style: .dark)
+        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        hud.textLabel.font = UIFont.systemFont(ofSize: 100)
+        hud.textLabel.text = text
+        hud.show(in: self.view)
+        hud.dismiss(afterDelay: 0.1)
+    }
+}
+
+extension ViewController: TutorialPageViewControllerDelegate {
+    
+    func tutorialPageViewController(tutorialPageViewController: TutorialPageViewController,
+                                    didUpdatePageCount count: Int) {
+        numberOfPages = count
+    }
+    
+    func tutorialPageViewController(tutorialPageViewController: TutorialPageViewController,
+                                    didUpdatePageIndex index: Int) {
+        currentPage = index
+    }
+    
+}
+
 

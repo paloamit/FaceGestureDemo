@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91B8AE6B248E67D2008111F1 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B8AE6A248E67D2008111F1 /* TutorialPageViewController.swift */; };
 		91E38A18248D599300ED70FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38A17248D599300ED70FC /* AppDelegate.swift */; };
 		91E38A1A248D599300ED70FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38A19248D599300ED70FC /* SceneDelegate.swift */; };
 		91E38A1C248D599300ED70FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38A1B248D599300ED70FC /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		38DEFEF3EBC16E3A52FE039F /* Pods_FaceGestureDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceGestureDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		882CF920A2B8E99758EA2EA2 /* Pods-FaceGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDemo.release.xcconfig"; path = "Target Support Files/Pods-FaceGestureDemo/Pods-FaceGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8CE2A82EF302EAE0255C189E /* Pods-FaceGestureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceGestureDemo.debug.xcconfig"; path = "Target Support Files/Pods-FaceGestureDemo/Pods-FaceGestureDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		91B8AE6A248E67D2008111F1 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		91E38A14248D599300ED70FC /* FaceGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E38A17248D599300ED70FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E38A19248D599300ED70FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				91E38A17248D599300ED70FC /* AppDelegate.swift */,
 				91E38A19248D599300ED70FC /* SceneDelegate.swift */,
 				91E38A2B248D5BBC00ED70FC /* FacialGestureCameraView.swift */,
+				91B8AE6A248E67D2008111F1 /* TutorialPageViewController.swift */,
 				91E38A1B248D599300ED70FC /* ViewController.swift */,
 				91E38A1D248D599300ED70FC /* Main.storyboard */,
 				91E38A20248D599500ED70FC /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E38A1C248D599300ED70FC /* ViewController.swift in Sources */,
+				91B8AE6B248E67D2008111F1 /* TutorialPageViewController.swift in Sources */,
 				91E38A18248D599300ED70FC /* AppDelegate.swift in Sources */,
 				91E38A1A248D599300ED70FC /* SceneDelegate.swift in Sources */,
 				91E38A2C248D5BBC00ED70FC /* FacialGestureCameraView.swift in Sources */,

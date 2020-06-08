@@ -81,6 +81,7 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - JGProgressHUD (2.1)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -88,10 +89,13 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
+  - StepSlider (1.6.0)
 
 DEPENDENCIES:
   - Firebase/MLVision
   - Firebase/MLVisionFaceModel
+  - JGProgressHUD
+  - StepSlider
 
 SPEC REPOS:
   trunk:
@@ -110,9 +114,11 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
+    - JGProgressHUD
     - nanopb
     - PromisesObjC
     - Protobuf
+    - StepSlider
 
 SPEC CHECKSUMS:
   Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
@@ -130,10 +136,12 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  StepSlider: 5cb091bccd3fb8d5ace8a6c3a59b0c0a812138a9
 
-PODFILE CHECKSUM: 2aa2fae87309375cedb192ca85fdb87f0af7be31
+PODFILE CHECKSUM: 23fa6d402c6accd9735e2c959aae6df5c0514fda
 
 COCOAPODS: 1.9.0

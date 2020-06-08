@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6T-Sx-txd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="OPR-dK-Y7b" kind="embed" id="SBy-HJ-mUx"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-Xa-qig" customClass="FacialGestureCameraView" customModule="FaceGestureDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="676" width="200" height="220"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -28,16 +34,86 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="oDW-Xa-qig" secondAttribute="bottom" id="2ZL-aA-L1i"/>
                             <constraint firstItem="oDW-Xa-qig" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SZa-N5-hZ0"/>
+                            <constraint firstItem="R6T-Sx-txd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cxe-bT-1cf"/>
+                            <constraint firstAttribute="bottom" secondItem="R6T-Sx-txd" secondAttribute="bottom" id="g0d-G3-m9g"/>
+                            <constraint firstItem="R6T-Sx-txd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r4u-tw-IeU"/>
+                            <constraint firstItem="R6T-Sx-txd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v21-Jr-CYl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="oDW-Xa-qig" id="q8K-cK-NDJ"/>
+                        <outlet property="containerView" destination="R6T-Sx-txd" id="wG3-62-L2X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cRi-86-ctP">
+            <objects>
+                <viewController storyboardIdentifier="GreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2De-oc-I0K" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wnh-jJ-H4P"/>
+                        <viewControllerLayoutGuide type="bottom" id="cVF-qV-0aI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3eX-1N-Qfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="doc-zF-TIw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="web-We-cgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-667" y="1781"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y0t-O6-UWZ">
+            <objects>
+                <viewController storyboardIdentifier="RedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CLg-pK-fPf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LgU-8q-j5c"/>
+                        <viewControllerLayoutGuide type="bottom" id="mEs-4e-7Gj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ebg-sZ-83A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.24425050000000001" blue="0.072994126549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ZcS-Fk-giW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BM2-4Q-iSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="1781"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hoq-02-l8Z">
+            <objects>
+                <viewController storyboardIdentifier="BlueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7hF-8F-wny" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJO-Eg-tvZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GfR-9H-7qz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9vP-nn-qqP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.27881835220000001" green="0.40340159660000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="FyL-BC-kIC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYo-ep-lD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="1781"/>
+        </scene>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="SsH-GG-pgR">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="OPR-dK-Y7b" customClass="TutorialPageViewController" customModule="FaceGestureDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PpK-pg-AHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="986"/>
         </scene>
     </scenes>
 </document>
